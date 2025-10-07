@@ -18,7 +18,7 @@ services:
     networks:
       - network
     volumes:
-      - prisma-migrations:/app/prisma/migrations 
+      - ./prisma/migrations:/app/prisma/migrations
 
   postgres:
     image: postgres:15-alpine
