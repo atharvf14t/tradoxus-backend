@@ -17,6 +17,8 @@ services:
       - redis
     networks:
       - network
+    volumes:
+      - prisma-migrations:/app/prisma/migrations 
 
   postgres:
     image: postgres:15-alpine
@@ -63,6 +65,7 @@ volumes:
   postgres-data:
   redis-data:
   pgadmin-data:
+  prisma-migrations:
 
 networks:
   network:
